@@ -29,5 +29,5 @@ RUN set -eux                                                      && \
 FROM alpine:3.11 AS final
 COPY --from=compress /usr/local/go/slapper/slapper /usr/local/go/slapper/slapper
 WORKDIR /usr/local/go/slapper
-ENTRYPOINT [ "/usr/local/go" ]
-CMD [ "slapper", "-help" ]
+ENTRYPOINT [ "/usr/local/go/slapper" ]
+CMD [ "-help" ]
